@@ -1,1 +1,1578 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S. Shiwakoti and Associates | Chartered Accountants</title>
+    <meta name="description" content="S. Shiwakoti and Associates - Licensed Chartered Accountants in Nepal providing auditing, taxation, FDI advisory, and business consulting services.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-navy: #1a2332;
+            --color-navy-light: #243044;
+            --color-navy-dark: #0f1620;
+            --color-gold: #b8934c;
+            --color-gold-light: #d4af61;
+            --color-ivory: #f8f6f3;
+            --color-ivory-dark: #eae6df;
+            --color-text: #2c3e50;
+            --color-text-light: #5a6a7a;
+            --color-white: #ffffff;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            line-height: 1.7;
+            background-color: var(--color-ivory);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--color-navy);
+            padding: 0 5%;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--color-navy);
+        }
+
+        .logo-text {
+            color: var(--color-white);
+        }
+
+        .logo-text h1 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            font-size: 0.75rem;
+            color: var(--color-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: var(--color-ivory);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--color-gold);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--color-gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 2px;
+            background: var(--color-ivory);
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 5% 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(184, 147, 76, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(184, 147, 76, 0.05) 0%, transparent 50%);
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(184, 147, 76, 0.1);
+            border: 1px solid rgba(184, 147, 76, 0.3);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .hero-badge span {
+            color: var(--color-gold);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .hero h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: var(--color-white);
+            font-weight: 600;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+
+        .hero h2 .highlight {
+            color: var(--color-gold);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            font-weight: 300;
+            animation: fadeInUp 0.8s ease 0.4s backwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s backwards;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-family: var(--font-body);
+        }
+
+        .btn-primary {
+            background: var(--color-gold);
+            color: var(--color-navy);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(184, 147, 76, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-white);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--color-gold);
+            color: var(--color-gold);
+        }
+
+        /* Credentials Bar */
+        .credentials {
+            background: var(--color-white);
+            padding: 2rem 5%;
+            border-bottom: 1px solid var(--color-ivory-dark);
+        }
+
+        .credentials-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .credential-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .credential-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--color-ivory);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .credential-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--color-gold);
+        }
+
+        .credential-text {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+        }
+
+        .credential-text strong {
+            display: block;
+            color: var(--color-navy);
+            font-weight: 600;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--color-gold);
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--color-navy);
+            font-weight: 600;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--color-text-light);
+            font-size: 1.05rem;
+            font-weight: 300;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--color-white);
+        }
+
+        .about-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image-main {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image-main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .about-image-content {
+            text-align: center;
+            padding: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-image-content .years {
+            font-family: var(--font-display);
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            line-height: 1;
+        }
+
+        .about-image-content p {
+            color: var(--color-ivory);
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .about-accent {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            background: var(--color-gold);
+            border-radius: 8px;
+            z-index: -1;
+        }
+
+        .about-content h3 {
+            font-family: var(--font-display);
+            font-size: 2.25rem;
+            color: var(--color-navy);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .about-content p {
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .about-feature-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--color-ivory);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .about-feature-icon svg {
+            width: 12px;
+            height: 12px;
+            stroke: var(--color-gold);
+            stroke-width: 3;
+        }
+
+        .about-feature span {
+            font-size: 0.95rem;
+            color: var(--color-text);
+            font-weight: 500;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--color-ivory);
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--color-white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--color-ivory-dark);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--color-gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(26, 35, 50, 0.1);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--color-ivory);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--color-gold);
+        }
+
+        .service-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--color-navy);
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon svg {
+            stroke: var(--color-white);
+        }
+
+        .service-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            color: var(--color-navy);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background: var(--color-navy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-us::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 0% 100%, rgba(184, 147, 76, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 100% 0%, rgba(184, 147, 76, 0.05) 0%, transparent 50%);
+        }
+
+        .why-us .section-header {
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-us .section-title {
+            color: var(--color-white);
+        }
+
+        .why-us .section-subtitle {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .why-us-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-us-item {
+            display: flex;
+            gap: 1.25rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .why-us-item:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(184, 147, 76, 0.3);
+        }
+
+        .why-us-number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            line-height: 1;
+            opacity: 0.5;
+        }
+
+        .why-us-content h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--color-white);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .why-us-content p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--color-white);
+        }
+
+        .contact-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--color-navy);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info > p {
+            color: var(--color-text-light);
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-item-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-ivory);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-item-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: var(--color-gold);
+        }
+
+        .contact-item-content h4 {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-item-content p {
+            color: var(--color-navy);
+            font-weight: 500;
+        }
+
+        .contact-form-wrapper {
+            background: var(--color-ivory);
+            padding: 3rem;
+            border-radius: 8px;
+        }
+
+        .contact-form-wrapper h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-navy);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--color-text);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            font-size: 0.95rem;
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background: var(--color-white);
+            border: 1px solid var(--color-ivory-dark);
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-gold);
+            box-shadow: 0 0 0 3px rgba(184, 147, 76, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            margin-top: 0.5rem;
+        }
+
+        .form-submit .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-navy-dark);
+            padding: 60px 5% 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .footer-column h4 {
+            color: var(--color-white);
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column ul li a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--color-gold);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-legal a {
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-legal a:hover {
+            color: var(--color-gold);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .about-image-main {
+                height: 350px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--color-navy);
+                flex-direction: column;
+                padding: 1.5rem 5%;
+                gap: 1rem;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-us-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .credentials-inner {
+                gap: 2rem;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-brand .logo {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">S</div>
+                <div class="logo-text">
+                    <h1>S. Shiwakoti & Associates</h1>
+                    <span>Chartered Accountants</span>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-us">Why Choose Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <span>Licensed by ICAN</span>
+            </div>
+            <h2>Trusted <span class="highlight">Financial Partners</span> for Your Business Success</h2>
+            <p>Providing comprehensive chartered accountancy services with integrity, expertise, and commitment to excellence since our establishment in Nepal.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    Schedule Consultation
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#services" class="btn btn-secondary">Explore Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials Bar -->
+    <div class="credentials">
+        <div class="credentials-inner">
+            <div class="credential-item">
+                <div class="credential-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <div class="credential-text">
+                    <strong>ICAN Licensed</strong>
+                    Institute of Chartered Accountants of Nepal
+                </div>
+            </div>
+            <div class="credential-item">
+                <div class="credential-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"/>
+                        <rect x="3" y="4" width="18" height="16" rx="2"/>
+                    </svg>
+                </div>
+                <div class="credential-text">
+                    <strong>Registration No. 1474</strong>
+                    Officially Registered Firm
+                </div>
+            </div>
+            <div class="credential-item">
+                <div class="credential-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="10" r="3"/>
+                        <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/>
+                    </svg>
+                </div>
+                <div class="credential-text">
+                    <strong>Kathmandu, Nepal</strong>
+                    Sankhamul-31
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-grid">
+            <div class="about-image">
+                <div class="about-image-main">
+                    <div class="about-image-content">
+                        <div class="years">CA</div>
+                        <p>Professional Excellence</p>
+                    </div>
+                </div>
+                <div class="about-accent"></div>
+            </div>
+            <div class="about-content">
+                <span class="section-label">About Our Firm</span>
+                <h3>Building Trust Through Professional Excellence</h3>
+                <p>S. Shiwakoti and Associates is a distinguished Chartered Accountancy firm based in Kathmandu, Nepal. Licensed by the Institute of Chartered Accountants of Nepal (ICAN), we are committed to delivering exceptional financial and business advisory services that help our clients achieve their goals.</p>
+                <p>Our team of qualified professionals brings together extensive experience in auditing, taxation, corporate advisory, and business consulting. We take pride in understanding the unique needs of each client and providing tailored solutions that drive sustainable growth.</p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>ICAN Licensed Professionals</span>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Client-Centric Approach</span>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Confidential & Reliable</span>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Timely Delivery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <span class="section-label">Our Services</span>
+            <h2 class="section-title">Comprehensive Financial & Business Solutions</h2>
+            <p class="section-subtitle">We offer a full spectrum of professional services tailored to meet the diverse needs of businesses across industries.</p>
+        </div>
+        <div class="services-grid">
+            <!-- Service 1: Statutory Audit -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
+                        <rect x="9" y="3" width="6" height="4" rx="1"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                </div>
+                <h3>Statutory Audit</h3>
+                <p>Independent examination of financial statements ensuring compliance with legal requirements and accounting standards as per Nepal's regulatory framework.</p>
+            </div>
+
+            <!-- Service 2: Internal Audit -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                </div>
+                <h3>Internal Audit</h3>
+                <p>Systematic evaluation of internal controls, risk management, and governance processes to enhance operational efficiency and safeguard assets.</p>
+            </div>
+
+            <!-- Service 3: Tax Consulting -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="5" width="20" height="14" rx="2"/>
+                        <path d="M2 10h20"/>
+                        <path d="M6 15h.01M10 15h4"/>
+                    </svg>
+                </div>
+                <h3>Tax Consulting & Compliance</h3>
+                <p>Expert guidance on income tax, VAT, TDS, and other tax matters ensuring optimal tax planning while maintaining full regulatory compliance.</p>
+            </div>
+
+            <!-- Service 4: Accounting & Bookkeeping -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+                        <path d="M8 7h8M8 11h8M8 15h4"/>
+                    </svg>
+                </div>
+                <h3>Accounting & Bookkeeping</h3>
+                <p>Comprehensive financial record maintenance, ledger management, and preparation of accurate financial statements following NFRS standards.</p>
+            </div>
+
+            <!-- Service 5: Merger & Acquisition -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="18" cy="18" r="3"/>
+                        <circle cx="6" cy="6" r="3"/>
+                        <path d="M13 6h3a2 2 0 012 2v7"/>
+                        <path d="M11 18H8a2 2 0 01-2-2V9"/>
+                    </svg>
+                </div>
+                <h3>Merger & Acquisition Advisory</h3>
+                <p>Strategic advisory services for business combinations including valuation, due diligence, deal structuring, and post-merger integration support.</p>
+            </div>
+
+            <!-- Service 6: FDI Services -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M2 12h20"/>
+                        <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                    </svg>
+                </div>
+                <h3>Foreign Direct Investment (FDI)</h3>
+                <p>End-to-end assistance for foreign investors including company registration, regulatory approvals, repatriation compliance, and ongoing advisory.</p>
+            </div>
+
+            <!-- Service 7: Business Outsourcing -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 010 7.75"/>
+                    </svg>
+                </div>
+                <h3>Business Process Outsourcing</h3>
+                <p>Scalable outsourcing solutions for finance, accounting, and back-office operations allowing you to focus on core business activities.</p>
+            </div>
+
+            <!-- Service 8: Due Diligence -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                        <path d="M11 8v6M8 11h6"/>
+                    </svg>
+                </div>
+                <h3>Due Diligence</h3>
+                <p>Thorough financial, legal, and operational investigation services for informed investment decisions and risk assessment in transactions.</p>
+            </div>
+
+            <!-- Service 9: Corporate Compliance -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <path d="M9 15l2 2 4-4"/>
+                    </svg>
+                </div>
+                <h3>Corporate Compliance</h3>
+                <p>Ensuring adherence to Companies Act, Nepal Rastra Bank directives, and other regulatory requirements with timely filings and documentation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us" id="why-us">
+        <div class="section-header">
+            <span class="section-label">Why Choose Us</span>
+            <h2 class="section-title">Committed to Your Success</h2>
+            <p class="section-subtitle">We distinguish ourselves through our unwavering commitment to quality, integrity, and client satisfaction.</p>
+        </div>
+        <div class="why-us-grid">
+            <div class="why-us-item">
+                <div class="why-us-number">01</div>
+                <div class="why-us-content">
+                    <h3>Licensed Expertise</h3>
+                    <p>Our team comprises qualified Chartered Accountants licensed by ICAN, ensuring professional competence and ethical standards.</p>
+                </div>
+            </div>
+            <div class="why-us-item">
+                <div class="why-us-number">02</div>
+                <div class="why-us-content">
+                    <h3>Tailored Solutions</h3>
+                    <p>We understand that every business is unique and provide customized services that address your specific needs and objectives.</p>
+                </div>
+            </div>
+            <div class="why-us-item">
+                <div class="why-us-number">03</div>
+                <div class="why-us-content">
+                    <h3>Confidentiality Assured</h3>
+                    <p>Your financial information is treated with the utmost confidentiality, protected by strict professional ethics and security protocols.</p>
+                </div>
+            </div>
+            <div class="why-us-item">
+                <div class="why-us-number">04</div>
+                <div class="why-us-content">
+                    <h3>Timely Delivery</h3>
+                    <p>We value your time and ensure all engagements are completed within agreed timelines without compromising on quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <span class="section-label">Get In Touch</span>
+            <h2 class="section-title">Let's Discuss Your Needs</h2>
+            <p class="section-subtitle">Ready to take your business to the next level? Contact us for a consultation.</p>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Reach out to us through any of the following channels. We look forward to hearing from you.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="10" r="3"/>
+                                <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Office Address</h4>
+                            <p>Sankhamul-31, Kathmandu, Nepal</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Phone Number</h4>
+                            <p>+977-1-XXXXXXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Email Address</h4>
+                            <p>info@sshiwakoti.com.np</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Business Hours</h4>
+                            <p>Sun - Fri: 10:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+977-XXXXXXXXXX">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="statutory-audit">Statutory Audit</option>
+                            <option value="internal-audit">Internal Audit</option>
+                            <option value="tax-consulting">Tax Consulting & Compliance</option>
+                            <option value="accounting">Accounting & Bookkeeping</option>
+                            <option value="merger-acquisition">Merger & Acquisition Advisory</option>
+                            <option value="fdi">Foreign Direct Investment</option>
+                            <option value="outsourcing">Business Process Outsourcing</option>
+                            <option value="due-diligence">Due Diligence</option>
+                            <option value="corporate-compliance">Corporate Compliance</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your requirements..." required></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary">
+                            Send Message
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13"/>
+                                <path d="M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">S</div>
+                        <div class="logo-text">
+                            <h1>S. Shiwakoti & Associates</h1>
+                            <span>Chartered Accountants</span>
+                        </div>
+                    </div>
+                    <p>A trusted Chartered Accountancy firm providing comprehensive financial and business advisory services in Nepal. Licensed by the Institute of Chartered Accountants of Nepal (ICAN).</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#services">Statutory Audit</a></li>
+                        <li><a href="#services">Tax Consulting</a></li>
+                        <li><a href="#services">M&A Advisory</a></li>
+                        <li><a href="#services">FDI Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:info@sshiwakoti.com.np">info@sshiwakoti.com.np</a></li>
+                        <li><a href="tel:+9771XXXXXXX">+977-1-XXXXXXX</a></li>
+                        <li><a href="#contact">Sankhamul-31, Kathmandu</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 S. Shiwakoti and Associates. All rights reserved. | Reg. No. 1474</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // In production, you would send this data to a server
+            alert('Thank you for your message. We will get back to you shortly.');
+            contactForm.reset();
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards and why-us items
+        document.querySelectorAll('.service-card, .why-us-item').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
