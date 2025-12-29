@@ -1394,46 +1394,46 @@
             </div>
             <div class="contact-form-wrapper">
                 <h3>Send Us a Message</h3>
-                <form id="contactForm">
+                <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLScF9xs77PNjdbpqm5bKCm5p8FGkz9K_0J1h_IN1KP2l7kJQxQ/formResponse" method="POST" target="hidden_iframe">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+                            <input type="text" id="firstName" name="entry.430619093" placeholder="Your first name" required>
                         </div>
                         <div class="form-group">
                             <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+                            <input type="text" id="lastName" name="entry.924188247" placeholder="Your last name" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            <input type="email" id="email" name="entry.46390487" placeholder="your@email.com" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+977-XXXXXXXXXX">
+                            <input type="tel" id="phone" name="entry.790592687" placeholder="+977-XXXXXXXXXX">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="service">Service Interested In</label>
-                        <select id="service" name="service">
+                        <select id="service" name="entry.773010232">
                             <option value="">Select a service</option>
-                            <option value="statutory-audit">Statutory Audit</option>
-                            <option value="internal-audit">Internal Audit</option>
-                            <option value="tax-consulting">Tax Consulting & Compliance</option>
-                            <option value="accounting">Accounting & Bookkeeping</option>
-                            <option value="merger-acquisition">Merger & Acquisition Advisory</option>
-                            <option value="fdi">Foreign Direct Investment</option>
-                            <option value="outsourcing">Business Process Outsourcing</option>
-                            <option value="due-diligence">Due Diligence</option>
-                            <option value="corporate-compliance">Corporate Compliance</option>
-                            <option value="other">Other</option>
+                            <option value="Statutory Audit">Statutory Audit</option>
+                            <option value="Internal Audit">Internal Audit</option>
+                            <option value="Tax Consulting & Compliance">Tax Consulting & Compliance</option>
+                            <option value="Accounting & Bookkeeping">Accounting & Bookkeeping</option>
+                            <option value="Merger & Acquisition Advisory">Merger & Acquisition Advisory</option>
+                            <option value="Foreign Direct Investment">Foreign Direct Investment</option>
+                            <option value="Business Process Outsourcing">Business Process Outsourcing</option>
+                            <option value="Due Diligence">Due Diligence</option>
+                            <option value="Corporate Compliance">Corporate Compliance</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="message">Your Message</label>
-                        <textarea id="message" name="message" placeholder="Tell us about your requirements..." required></textarea>
+                        <textarea id="message" name="entry.1188660300" placeholder="Tell us about your requirements..." required></textarea>
                     </div>
                     <div class="form-submit">
                         <button type="submit" class="btn btn-primary">
@@ -1445,6 +1445,7 @@
                         </button>
                     </div>
                 </form>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { document.getElementById('contactForm').reset(); alert('Thank you for your message! We will get back to you shortly.'); submitted = false; }"></iframe>
             </div>
         </div>
     </section>
@@ -1542,13 +1543,11 @@
             });
         });
 
-        // Form submission
+        // Form submission to Google Forms
+        var submitted = false;
         const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            // In production, you would send this data to a server
-            alert('Thank you for your message. We will get back to you shortly.');
-            contactForm.reset();
+        contactForm.addEventListener('submit', () => {
+            submitted = true;
         });
 
         // Intersection Observer for animations
